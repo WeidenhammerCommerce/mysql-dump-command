@@ -1,7 +1,5 @@
 # mysql-dump-command
-## Install via composer (need to update for using github)
-
-composer config repositories.hammer-mysql-dump-command git git@github.com:WeidenhammerCommerce/mysql-dump-command.git
+## Install via composer
 
 composer require hammer/mysql-dump-command:dev-master
 
