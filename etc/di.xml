@@ -3,7 +3,7 @@
     <type name="Magento\Framework\Console\CommandList">
         <arguments>
             <argument name="commands" xsi:type="array">
-                <item name="dump" xsi:type="object">Hammer\DumpCommand\Console\MysqlDump</item>
+                <item name="dump" xsi:type="object">Hammer\MysqlDumpCommand\Console\MysqlDump</item>
             </argument>
         </arguments>
     </type>
