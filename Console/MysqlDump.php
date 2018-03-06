@@ -72,8 +72,14 @@ class MysqlDump extends Command
 
         $destination = $backupsDir . '/' . $filename;
         $commmand = 'mysqldump -u' . $user . ' -h' . $host . ' -p' . $pass . ' ' . $dbname . ' >>' . $destination;
-        
         shell_exec($commmand);
+        
+        $tarCommmand = 'tar -cvzf ' . $destination . '.tar.gz ' . $destination;
+        shell_exec($tarCommmand);
+        
+        $cleanCommmand = 'rm ' . $destination;
+        shell_exec($cleanCommmand);
+
 
         $output->writeln('Dump done in ' . $destination);
 
